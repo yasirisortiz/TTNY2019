@@ -1,4 +1,4 @@
 from flask_pymongo import PyMongo
-from . import app
+from . import settings
 
-mongo = PyMongo(app)
+mongo =  PyMongo(uri=settings.MONGO_URI, retryWrites=False)
