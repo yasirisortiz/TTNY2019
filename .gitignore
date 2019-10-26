@@ -1,0 +1,8 @@
+*.pyc
+config.*
+venv/*
+app/settings.py
+*.flaskenv
+*.env
+__pycache__
+random_*.txt
