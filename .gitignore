@@ -2,3 +2,4 @@
 config.*
 venv/*
 app/settings.py
+*.flaskenv
