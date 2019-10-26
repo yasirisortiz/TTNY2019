@@ -1,16 +1,17 @@
 import os
 
+
 from flask import Flask, render_template
 from . import settings, views, models
 from flask_pymongo import PyMongo
-from .extensions import mongo
+
 
 project_dir = os.path.dirname(os.path.abspath(__file__))
+
 
 def create_app(config_object=settings):
     app = Flask(__name__, instance_relative_config=True)
     app.config.from_object(settings)
-
 
     register_blueprints(app)
     register_errorhandlers(app)
@@ -20,8 +21,13 @@ def create_app(config_object=settings):
 
 def register_extensions(app):
     """Register Flask extensions."""
-    mongo.init_app(app)
-    mongo.retryWrites = False
+
+    app.config['MONGODB_SETTINGS'] = {
+        'db': settings.MONGO_HOST,
+        'host': settings.MONGO_URI
+    }
+
+    models.models.db.init_app(app)
     return None
 
 def register_blueprints(app):
@@ -45,6 +51,3 @@ def register_errorhandlers(app):
         return render_template('500.html')
 
     return None
-
-app = create_app()
-mongo =  PyMongo(app, uri=settings.MONGO_URI)
