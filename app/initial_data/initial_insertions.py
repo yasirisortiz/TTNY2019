@@ -22,6 +22,7 @@ class InitialUsers():
         u = open("random_names.txt", "r").readlines()
 
         emails = ["gmail.com", "ymail.com", "outlook.com"]
+        user_types = ["Volunteer", "Recipient"]
 
         for i in range(len(u)):
             u[i] = u[i].replace("\r", "")
@@ -38,8 +39,9 @@ class InitialUsers():
             hex = pwd.hexdigest()
 
             email = "@".join((uname, (emails[random.randint(0, len(emails)-1)])))
-            # email = "{}@{}".format(uname, (emails[random.randint(0, len(emails)-1)]))
             zip = random.randint(10001, 10314)
+
+            type = user_types[random.randint(0, len(user_types)-1)]
 
             # creates the Statistics document
             stats = models.Statistics(donated=0, received=0, delivered=0)
@@ -48,7 +50,7 @@ class InitialUsers():
             location = models.Location(state="NY", zip=zip)
 
             # creates the Users document
-            user = models.Users(username=uname, fname=fname, lname=lname, email=email, password=hex, volunteer=True, stats=stats, user_location=location)
+            user = models.Users(username=uname, fname=fname, lname=lname, email=email, password=hex, user_type=type, stats=stats, user_location=location)
 
             user.save()
 
