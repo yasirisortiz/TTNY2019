@@ -6,14 +6,15 @@ from mongoengine import Document, EmbeddedDocument, StringField, EmailField, Lis
 db = MongoEngine()
 
 
-EVENT_TYPE = ("Food Drive", "Clothing Drive", "Toiletree Drive", "School Supplies Drive", "Book Drive")
+DONATION_TYPE = ("Food Drive", "Clothing Drive", "Toiletree Drive", "School Supplies Drive", "Book Drive", "Other")
 USER_TYPE = ("Volunteer", "Recipient", "Organization", "Guest")
 
 
 class Organization(db.EmbeddedDocument):
     name = StringField(max_length=300)
-    donation_type = StringField(max_length=100)
+    donation_type = StringField(choices=DONATION_TYPE, max_length=100)
     location = EmbeddedDocumentField("Location")
+    phonenumber = IntField(max_length=10)
 
 
 class Statistics(db.EmbeddedDocument):
@@ -46,7 +47,7 @@ class Users(db.Document):
 
 class Events(db.Document):
     organization = EmbeddedDocumentField("Organization", required=True)
-    type = StringField(choices=EVENT_TYPE, required=True)
+    type = StringField(choices=DONATION_TYPE, required=True)
     date = DateTimeField(required=True)
     description = StringField(required=True)
     flier = ImageField()
