@@ -1,5 +1,6 @@
 # from app.extensions import mongo
 from flask_mongoengine import MongoEngine
+
 from mongoengine import Document, EmbeddedDocument, StringField, EmailField, ListField, BooleanField, EmbeddedDocumentField, ImageField, IntField, DateTimeField
 
 
@@ -15,7 +16,7 @@ class Organization(db.EmbeddedDocument):
     donation_type = StringField(choices=DONATION_TYPE, max_length=100)
     location = EmbeddedDocumentField("Location")
     phonenumber = IntField(max_length=10)
-
+    
 
 class Statistics(db.EmbeddedDocument):
     donated = IntField()
@@ -51,3 +52,4 @@ class Events(db.Document):
     date = DateTimeField(required=True)
     description = StringField(required=True)
     flier = ImageField()
+
