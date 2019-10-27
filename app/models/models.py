@@ -45,11 +45,12 @@ class Users(db.Document):
     stats = EmbeddedDocumentField("Statistics")
     user_location = EmbeddedDocumentField("Location")
 
-
+    
 class Events(db.Document):
     organization = EmbeddedDocumentField("Organization", required=True)
     type = StringField(choices=DONATION_TYPE, required=True)
     date = DateTimeField(required=True)
     description = StringField(required=True)
     flier = ImageField()
+
 
