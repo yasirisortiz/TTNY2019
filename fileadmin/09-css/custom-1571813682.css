@@ -1,0 +1,343 @@
+@import url('https://fonts.googleapis.com/css?family=Lato%7CMontserrat&display=swap');
+:root {
+  --primary: #86C232;
+  --gray-700: #474B4F;
+  --gray-600: #6B6E70;
+  --gray-900: #222629;
+  --secondary: #ff7a00;
+}
+
+
+.boardright{
+	margin-left: 30%;
+}
+
+.boardleft{
+	margin-right: 30%
+}
+
+
+
+.tx_timeline .timeline2 .timeline-badge > a {
+    color: var(--primary) !important;
+}
+body{
+	font-weight: 300;
+    font-style: normal;
+    letter-spacing: .06em;
+    line-height: 1.8em;
+}
+.bg-light {
+    background-color: rgba(0, 0, 0, 0.3) !important; 
+    background-image: none;
+}
+
+.timeline2 .timeline-panel .timeline-heading h4,
+.timeline2 .timeline-panel .timeline-body > p, 
+.timeline2 .timeline-panel .timeline-body > ul {
+	margin: 15px;
+}
+h1.display-1{
+	font-size: 3.5rem;
+	font-weight: 600;
+	letter-spacing: .01em;
+    line-height: 1.3em;
+    margin-bottom: 0.67em;   
+}
+.text-center h1.display-1{
+    margin:0 auto;
+    max-width: 60%;
+}
+
+
+section{
+	min-height: 100vh;
+}
+section#s36,
+section#s35,
+section#s72,
+section#s112,section#s122,
+section#s108,
+section#s50,
+section#s130,
+section#s123
+{
+	min-height: 66vh;
+}
+section#s166,
+section#s168{
+	min-height: 33vh;
+}
+.ext-faq .faq section{
+	min-height: 0px;
+}
+.spacetotop{
+	margin-top: 200px;
+}
+
+/* Adapting for smaller screens */
+@media (max-width: 767.98px) { 
+	h1.display-1, 
+	h2.display-2{
+		font-size: 2.5rem;
+	}
+	.text-center h1.display-1{
+	    max-width: 80%;
+		}
+	.bg-light {
+	    background-color: rgba(0, 0, 0, 0.5) !important;
+		}
+
+	
+	}
+/* END OF Adapting for smaller screens */
+
+
+.coretext{
+	font-size: 0.8rem;
+}
+.coreinfo{
+	text-transform: uppercase;
+}
+
+h1, h2, h3, h4, h5, h6, 
+.h1, .h2, .h3, .h4, .h5, .h6 {
+    color: var(--gray-600);
+    margin-bottom: 1.5rem;
+}
+h4, h5, h6, .h4, .h5, .h6{
+	margin-bottom: 1rem;
+}
+
+
+.subheader{
+	margin-bottom: 1rem;
+}
+.navbar-brand{
+	margin-right: 2rem !important;
+}
+.navbar-brand img{
+	vertical-align: center !important;
+}
+.navbar-brand span{
+	font-family: "Montserrat";
+	font-weight: bold;
+	font-size: 1.75rem;
+
+	line-height:unset;
+	display:inline-block;
+	vertical-align: middle !important;
+	padding:8px 0px 0px 10px;
+}
+
+#c16 ul{ 
+	list-style-type: none;
+	padding-left: 2rem;
+	} 
+#c16 ul li{
+	padding-left: 2rem;
+	padding-bottom: 1.2rem;
+	background-image: url('../02-graphics/01-general/li-icon.svg');
+	background-position: 0rem 0.2rem;
+	background-size: 1.2rem 1.2rem;
+	background-repeat: no-repeat;
+	}  
+
+
+
+#c30,.c30{
+	background-color:  var(--gray-700);
+	color: #fff;
+	padding: 0px;
+    background: #6B6E70 url("../08-logos/logo_loader_square.svg") no-repeat scroll bottom right;
+    background-size: 100px;
+}
+#c31,.c31{
+	background-color:  var(--gray-900);
+	color: 	var(--gray-600);
+	font-size: 0.9375rem;
+}
+#c31 .container,.c31 .container{
+	padding: 15px;
+}
+.footer{
+	
+}
+.navbar{
+	border: none;
+	border-width: 0px;
+}
+.container-fluid{
+	padding-left: 0px;
+	padding-right: 0px;
+}
+
+.nav-tabs .nav-link{
+	border: 0px;
+}
+.nav-tabs .nav-item{
+	background-color: var(--gray-600);
+	color: #fff;
+}
+.nav-tabs .nav-link:hover,
+.nav-tabs .nav-link.active, 
+.nav-tabs .nav-item.show .nav-link {
+    color: #fff;
+    background-color: var(--secondary);
+    border-color: none;
+    border-width: 0px;
+}
+.communitycards{
+	border: 1px solid var(--gray-600);	
+}
+
+
+.communitycards h5.cardtitle{
+	border-bottom: 2px solid var(--primary);	
+}
+.card{
+	border: none;
+}
+.card-img-bottom {
+    margin-left: 5px;
+}
+h5.card-title{
+	border-bottom: 1px solid var(--secondary);
+}
+h4.card-title{
+	border-bottom: 1px dashed white;
+	padding-bottom: 14px;
+}
+
+.card-title{
+	margin-bottom: 20px;
+}
+.card-subtitle{
+	margin-bottom: 15px;
+	font-size: larger;
+}
+.footer a:hover{
+	color: #ffffff;
+}
+
+
+@media (min-width: 800px)
+.navbar-expand-sm .navbar-nav .nav-link {
+    padding-right: 1rem;
+    padding-left: 1rem;
+}
+
+/**/
+#c4{
+	color: #fff;
+}
+
+.darkbackground{
+	background-color: #222629;
+}
+
+.modal-content,
+.text-white .modal-content h2{
+	color: var(--gray-600) !important;
+}
+/* trying to get the element to float in the section*/
+.insection h1{
+	text-align: center;
+}
+section.ge_background_wrapper{
+	-webkit-box-pack: center!important;
+    -ms-flex-pack: center!important;
+    justify-content: center!important;
+	display: flex!important;
+	flex-direction: column;
+}
+
+
+.anchor{
+  display: block;
+  height: 76px; /*same height as header*/
+  margin-top: -76px; /*same height as header*/
+  visibility: hidden;
+  }
+  
+
+
+.text-white h1,
+.text-white h2,
+.text-white h2.subheader, 
+.text-white h3,
+.text-white h3.subheader, 
+.text-white h4,
+.text-white h4.subheader,
+.text-white h5,
+.text-white h5.subheader,
+.white h1, .white h3,
+.card-subtitle{
+	color: #ffffff !important;
+}
+
+
+.btn-light {
+    
+}
+.primary h2.display-1{
+	color: var(--primary);
+}
+
+
+.btn-secondary{
+	color: #fff;
+	border-width: 3px;
+    background-color: transparent !important;
+    border-color: #fff;
+	background-image: none;
+}
+.btn-secondary:hover {
+    color: #fff;
+    background-color: var(--primary);
+    border-color: var(--primary);
+    background-image: none;
+}
+
+
+.btn-dark {
+	border-width: 3px;
+    background-image: none;
+    color: var(--primary);
+    background-color: transparent;
+    border-color: var(--primary);
+}
+.btn-dark:hover{
+	color: #fff;
+    background-color: var(--primary);
+    border-color: var(--primary);
+}
+
+.btn-light,
+.btn-primary{
+	color: #fff;
+	border-width: 3px;
+    background-color: transparent !important;
+    border-color: var(--primary);
+	background-image: none;
+}
+.btn-light:hover,
+.btn-primary:hover {
+    color: #fff;
+    background-color: var(--primary);
+    border-color: #fff;
+    background-image: none;
+}
+
+.btn-success {
+	background-image: none;
+    background-color: var(--primary);
+    background-repeat: no-repeat;
+}
+
+.btn-light a{
+	
+}
+
+
+/*ANNA please put your styles below this point so i know what i have been writing. yours will overwrite everything above*/

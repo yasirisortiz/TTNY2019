@@ -1,0 +1,12 @@
+html, body{
+    scroll-behavior: smooth;
+}
+
+.hide-element{
+    visibility: hidden;
+}
+
+.welecome-text {
+    margin-top: 10rem !important;
+    font-size: 2.5rem !important;
+}
