@@ -29,6 +29,7 @@ class Users(db.Document):
     username = StringField(max_length=50, required=True, unique=True)
     fname = StringField(max_length=30, required=True)
     lname = StringField(max_length=30, required=True)
+    password = StringField(required=True)
     email = StringField(max_length=100, required=True, unique=True)
     volunteer = BooleanField(required=True)
     description = StringField(max_length=300)
