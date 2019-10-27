@@ -38,3 +38,4 @@ class Users(db.Document):
     organization = EmbeddedDocumentField("Organization")
     stats = EmbeddedDocumentField("Statistics")
     user_location = EmbeddedDocumentField("Location")
+
