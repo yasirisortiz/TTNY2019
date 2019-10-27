@@ -10,3 +10,8 @@ def index():
 	users = models.Users.objects.all()
 
 	return render_template("home/index.html")
+
+# home route
+@blueprint.route("/home")
+def home():
+	return render_template("home/home.html")
