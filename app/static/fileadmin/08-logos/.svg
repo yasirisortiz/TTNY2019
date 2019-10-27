@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="305px" height="305px" viewBox="0 0 305 305" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 53 (72520) - https://sketchapp.com -->
+    <title>Artboard</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M187.139332,103.78216 C170.365825,103.78216 156.769713,90.2831387 156.769713,73.6321501 C156.769713,56.9800057 170.365825,43.4809848 187.139332,43.4809848 C203.912839,43.4809848 217.50895,56.9800057 217.50895,73.6321501 C217.50895,90.2831387 203.912839,103.78216 187.139332,103.78216 Z M257.809059,89.7343473 C272.978264,138.251763 271.116211,192.252471 248.591258,242.216995 C239.350341,262.719232 227.260285,281.023068 213.05158,296.964373 L171.320084,296.964373 C187.400089,258.826373 194.569746,216.293881 190.349785,172.196386 C189.377726,162.043513 187.765333,152.113717 185.680203,142.378102 C206.010221,119.70867 230.670005,101.896065 257.809059,89.7343473 Z M86.7367371,7.6918774 C131.406372,49.2557778 161.624576,106.676607 167.893836,172.196386 C172.113797,216.293881 164.94414,258.826373 148.864135,296.964373 L76.3006844,296.964373 C55.6620579,264.026484 42.1607253,225.933562 38.2066068,184.606608 C31.9373466,119.086829 50.7162312,56.9779252 86.7367371,7.6918774 Z" id="path-1"></path>
+        <filter x="-0.7%" y="-0.5%" width="101.3%" height="101.0%" filterUnits="objectBoundingBox" id="filter-2">
+            <feOffset dx="0" dy="0" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="0.5" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.5 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="Artboard" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="logo">
+            <use fill="black" fill-opacity="1" filter="url(#filter-2)" xlink:href="#path-1"></use>
+            <use fill="#86C232" fill-rule="evenodd" xlink:href="#path-1"></use>
+        </g>
+    </g>
+</svg>
