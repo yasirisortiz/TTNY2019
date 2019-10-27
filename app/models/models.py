@@ -1,6 +1,6 @@
 # from app.extensions import mongo
 from flask_mongoengine import MongoEngine
-from mongoengine import Document, EmbeddedDocument, StringField, EmailField, ListField, BooleanField, EmbeddedDocumentField, ImageField, IntField
+from mongoengine import Document, EmbeddedDocument, StringField, EmailField, ListField, BooleanField, EmbeddedDocumentField, ImageField, IntField, DateTimeField
 
 
 db = MongoEngine()
@@ -35,7 +35,7 @@ class Users(db.Document):
     lname = StringField(max_length=30, required=True)
     password = StringField(required=True)
     email = StringField(max_length=100, required=True, unique=True)
-    volunteer = StringField(choices=USER_TYPE, require=True)
+    user_type = StringField(choices=USER_TYPE, require=True)
     description = StringField(max_length=300)
     languages = ListField(StringField(), default=list)
     photo = ImageField()
