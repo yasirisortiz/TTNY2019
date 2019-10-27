@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 from Crypto.Hash import SHA256
 from mongoengine import connect
+from datetime import datetime
 import random
 import imp
 
@@ -55,8 +56,33 @@ class InitialUsers():
             user.save()
 
 
+    def events_ins(self):
+        # Sample Org #1
+        location1 = models.Location(street="15 Grumman Road West Suite 1450", city="Bethpage", state="NY", zip=11714)
+
+        org1 = models.Organization(name="Feeding America", donation_type="Food Drive", location=location1)
+
+        event1 = models.Events(organization=org1, type="Food Drive", date=(datetime.strptime("11/03/2019 08:30", "%m/%d/%Y %H:%M")), description="We will be giving out canned goods starting at 8:30 AM.")
+
+        # saves and send to db
+        event1.save()
+
+        # Sample Org #2
+        location2 = models.Location(street="355 Food Center Dr.", city="New York", state="NY", zip=10474)
+
+        org2 = models.Organization(name="Food Bank for New York City", donation_type="Food Drive", location=location1, phonenumber=7189914300)
+
+        event2 = models.Events(organization=org2, type="Food Drive", date=(datetime.strptime("11/12/2019 10:00", "%m/%d/%Y %H:%M")), description="We will be be providing those in need with resources to survive another week.")
+
+        # saves and send to db
+        event2.save()
+
+
+
 if __name__ == '__main__':
     initial = InitialUsers()
 
     ''' Calling for the initial insertions onto the Users document '''
     # initial.user_ins()
+    ''' Calling for the initial insertions onto the Events document '''
+    # initial.events_ins()
