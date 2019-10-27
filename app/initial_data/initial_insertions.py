@@ -33,13 +33,9 @@ class InitialUsers():
             fname = u[i].split(" ")[0]
             lname = u[i].split(" ")[1]
 
-            # print(uname)
-
             # generate hash
             pwd = SHA256.new(p[i].encode("utf8"))
             hex = pwd.hexdigest()
-
-            #print(hex)
 
             email = "@".join((uname, (emails[random.randint(0, len(emails)-1)])))
             # email = "{}@{}".format(uname, (emails[random.randint(0, len(emails)-1)]))
@@ -51,15 +47,14 @@ class InitialUsers():
             # creates the Location document
             location = models.Location(state="NY", zip=zip)
 
-            # print(email.replace(" ", ""))
-
             # creates the Users document
-            user = models.Users(username=uname, fname=fname, lname=lname, email=email, volunteer=True, stats=stats, user_location=location)
+            user = models.Users(username=uname, fname=fname, lname=lname, email=email, password=hex, volunteer=True, stats=stats, user_location=location)
 
-            # print(user.email)
             user.save()
 
 
 if __name__ == '__main__':
     initial = InitialUsers()
-    initial.user_ins()
+
+    ''' Calling for the initial insertions onto the Users document '''
+    # initial.user_ins()
