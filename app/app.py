@@ -3,7 +3,7 @@ import os
 
 from flask import Flask, render_template
 from . import settings, views, models
-from flask_pymongo import PyMongo
+import pymongo
 
 
 project_dir = os.path.dirname(os.path.abspath(__file__))
@@ -27,14 +27,20 @@ def register_extensions(app):
         'host': settings.MONGO_URI
     }
 
+    # sets the connection to the DB and Collection
+    client = pymongo.MongoClient(settings.MONGO_URI)
+
+    #initializes it
     models.models.db.init_app(app)
     return None
+
 
 def register_blueprints(app):
     """Register Flask blueprints."""
     app.register_blueprint(views.home.blueprint)
     app.register_blueprint(views.auth.blueprint)
     return None
+
 
 def register_errorhandlers(app):
     """Register error handlers."""
